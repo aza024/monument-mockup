@@ -1,19 +1,22 @@
 /* universal selector - set font of entire site to Raleway */
 *{
     font-family: 'Raleway', sans-serif;
+    line-height:  1.618;
 }
 /* navigation styling */
 .nav{
-    width:100%;
+    width:100%; 
     padding: 0;
     list-style: none;
     text-align:center;
     letter-spacing: .25em;
 
 }
+
 .nav li{
     display: inline;
     justify-content: space-between; 
+    text-transform: uppercase;
  
 }
 
@@ -23,13 +26,20 @@
     font-weight: bold;
     color:#7C98A9;
 }
+
+.nav li a:hover{
+    color:#45545E;
+}
 /* text styling */
 main{
+    display:flex;
+    flex-direction:column;
     margin-right:5%;
     margin-left:5%;
+
 }
 
-h3, h4{
+p, article, h3, h4{
     color:#45545E;
 }
 
@@ -42,16 +52,35 @@ h1{
     letter-spacing: 5px;
     margin: 0%;
     font-size: 3em;
+    text-transform: uppercase;
 }
 
 h3{
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 section{
     background: url(images/blog_header_bg.jpg);
     background-size: cover;
 }
+
+.content{
+    display:flex;
+    order: 1;
+}
+aside {
+    display:flex;
+    order: 2;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin-top: 66px;
+   
+
+}
+
+    /* display: flex; */
+
 
 /* image styling */
 .firstimage{
@@ -62,20 +91,21 @@ img{
     max-width: 100%;
 }
 
-.imgpos{
+/* .imgpos{
     display:flex;
     margin: 100;
-}
+} */
 
 /* footer styling */
 i{
-    font-size:3em;
+    color:#45545E;
+    margin: 20px;
 }
 
 hr{
     /* size:10; */
     color:#45545E;;
-    background:#45545E;;
+    background:#45545E;
 }
 
 footer{
@@ -84,12 +114,50 @@ footer{
     padding: 15px 10px;
 }
 
-.social-media{
+.social-media i{
     font-size:45px;
 }
 
+i:hover{
+    color:white;
+}
+
 .issues ul li{
+    text-wrap: none;
     color:#7c98a9;
     font-weight:bold;
-    padding: 3px;
+}
+
+.issues ul li:hover{
+    color: #45545E
+}
+.socialmedia p {
+    color:#45545E;
+}
+
+.email{
+    width: 30em;
+    padding: 1em;
+    border:none;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.button{
+    background-color: transparent; 
+    border: 2px solid #45545E;
+    padding: 1em;
+    margin-left: 10px;
+    width: 150px;
+    text-transform: uppercase;
+}
+
+.button:hover{
+    background-color: #45545E;
+    color: white; 
+}
+
+.footer-name{
+    font-size: .75em;
 }
