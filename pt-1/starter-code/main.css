@@ -21,7 +21,7 @@
 }
 
 .nav li{
-    display: inline;
+    display: inline-block;
     justify-content: space-between; 
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
