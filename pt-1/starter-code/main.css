@@ -2,14 +2,22 @@
 *{
     font-family: 'Raleway', sans-serif;
     line-height:  1.618;
+
 }
+
 /* navigation styling */
+.stickynav{
+    position: sticky;
+    height: 30px;
+    top: 0;
+}
 .nav{
     width:100%; 
     padding: 0;
     list-style: none;
     text-align:center;
     letter-spacing: .25em;
+    background-color:white;
 
 }
 
@@ -17,14 +25,16 @@
     display: inline;
     justify-content: space-between; 
     text-transform: uppercase;
- 
+    font-family: 'Lato', sans-serif;
 }
 
 .nav li a{
-    padding: 20px 70px;
+    padding: 15px 70px;
+    margin: 5px;
     text-decoration: none;
     font-weight: bold;
     color:#7C98A9;
+
 }
 
 .nav li a:hover{
@@ -39,6 +49,13 @@ main{
 
 }
 
+article{
+    font-family:'Lato', sans-serif;
+}
+p{
+    font-family: 'Lato', sans-serif;
+    margin-top:3px;
+}
 p, article, h3, h4{
     color:#45545E;
 }
@@ -59,11 +76,22 @@ h3{
     text-transform: uppercase;
 }
 
+h4{
+    margin-bottom: 0;
+}
+
+li a{
+    font-family: 'Lato', sans-serif;
+}
+
 section{
     background: url(images/blog_header_bg.jpg);
     background-size: cover;
 }
 
+.issues{
+    font-family: 'Lato', sans-serif;
+}
 .content{
     display:flex;
     order: 1;
@@ -74,9 +102,7 @@ aside {
     flex-direction: column;
     justify-content: flex-start;
     align-content: flex-start;
-    margin-top: 66px;
-   
-
+    margin-top: 46px;
 }
 
     /* display: flex; */
@@ -89,6 +115,7 @@ aside {
 
 img{
     max-width: 100%;
+    padding: 10px 0;
 }
 
 /* .imgpos{
@@ -112,10 +139,11 @@ footer{
     background:#D4F2F5;
     text-align: center;
     padding: 15px 10px;
+    margin-top: 10px;
 }
 
 .social-media i{
-    font-size:45px;
+    font-size:1.5em;
 }
 
 i:hover{
@@ -136,12 +164,13 @@ i:hover{
 }
 
 .email{
-    width: 30em;
+    width: 27em;
     padding: 1em;
     border:none;
     margin-bottom: 20px;
     text-transform: uppercase;
     text-align: center;
+
 }
 
 .button{
@@ -151,11 +180,17 @@ i:hover{
     margin-left: 10px;
     width: 150px;
     text-transform: uppercase;
+    color:#45545E; 
+    opacity: 1;
+    transition: background-color 700ms linear;
+    font-weight: bolder;
 }
+
 
 .button:hover{
     background-color: #45545E;
-    color: white; 
+    color: white;
+    opacity: 0.75;
 }
 
 .footer-name{
