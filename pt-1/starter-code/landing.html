@@ -18,15 +18,15 @@
                     <li><a class ="navbar" href="#about">About</a></li>
                     <li><a class ="navbar" href="#gallery">Gallery</a></li>
                     <li><a class ="navbar" href="landing.html">Blog</a></li>
-                    <li><a class ="navbar"href="#contact">Contact</a></li>
+                    <li><a class ="navbar" href="#contact">Contact</a></li>
                 </ul>
             </header>
     
     <!-- <img src = "images/home_header_bg.jpg"> -->
 <main>
    <section>
-        <div class = "headerimg">
-        <h1>Monument</h1>
+         <div class = "headerimg">
+       <a href ="#cactus"><h1>Monument</h1></a>
         <h4>A lifestyle magazine</h4>
     </div>
 </section>
@@ -41,7 +41,7 @@
                     <div>
                         <h3>Issue Twenty - The Southwest</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In voluptates amet ratione suscipit aliquam, labore obcaecati. Quasi placeat, dolorum excepturi consequuntur fuga dolore amet eligendi, deserunt quaerat deleniti alias totam.</p>
-                        <button class = "readmore">Read More</button>
+                        <button class = "readmore" tabindex=1 accesskey="r" >Read More</button>
                     </div>
                 </article>
 
@@ -50,7 +50,7 @@
                 <div>
                     <h3>Issue Ninteen - Camping</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, maiores. Labore inventore eveniet nemo ratione explicabo id eaque quae non consequuntur! Aperiam nam qui voluptate culpa placeat. A, in. Similique.</p>
-                    <button class = "readmore">Read More</button>
+                    <button class = "readmore" tabindex=2 accesskey="r">Read More</button>
                 </div>
             </article>
 
@@ -59,15 +59,11 @@
             <div>
                 <h3>Issue Eighteen - Food</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quod omnis aspernatur voluptas dolorem! Molestiae sunt laudantium ipsum, atque, praesentium voluptatum aliquid, in iusto velit quaerat repellendus nam nostrum! Aspernatur.</p>
-                <button class = "readmore">Read More</button>
+                <button class = "readmore" tabindex=3 accesskey="r">Read More</button>
+            </div>
             </article>
-        </div>
-    </section>
+    </section> 
 
-            
-            
-        </div>
-</div>
     <section>
     <div class = "aboutmag">
             <h2>About The Magazine</h2>
@@ -82,17 +78,17 @@
                 </article>
     </section>
 
+    <a id ="cactus"></a>
     <h3>Issue Twenty</h3>
         <h5>A Visual Guide to The Southwest</h5>
-
            <!-- picture grid start -->
     <section class = "picgrid">
-         <img class ="pic1" src ="images/gallery_1.jpg">
-         <img class ="pic2"src ="images/gallery_4.jpg">
-         <img class ="pic3"src ="images/gallery_5.jpg">
-         <img class ="pic4"src ="images/gallery_3.jpg">
-         <img class ="pic5"src ="images/gallery_2.jpg">
-         <img class ="pic6"src ="images/gallery_6.jpg">
+         <img class ="pic1" src ="images/gallery_1.jpg" alt="">
+         <img class ="pic2" src ="images/gallery_4.jpg" alt="">
+         <img class ="pic3" src ="images/gallery_5.jpg" alt="">
+         <img class ="pic4" src ="images/gallery_3.jpg" alt="">
+         <img class ="pic5" src ="images/gallery_2.jpg" alt="">
+         <img class ="pic6" src ="images/gallery_6.jpg" alt="">
                 
     </section>
 
@@ -103,9 +99,11 @@
          <input class = "email" type = "text" value = "email" placeholder = "email">
          <input class = "subject" type = "text" value = "subject" placeholder = "subject">
          <input class = "message" type = "text" value = "message" placeholder = "message">
-         <input class = "submit" type = "button" value = "submit" placeholder = "submit">
+         <input class = "submit" type = "button" value = "submit" placeholder = "submit" tabindex=4 accesskey="r"
+         >
         </form>
     </section>
+</main>
     <footer>
             <div class="social-media">
                     <i class="fa fa-facebook-square" aria-hidden="true"></i>
@@ -114,10 +112,9 @@
             </div>
             <input class ="footeraddress" type ="text" placeholder="email address">
            
-            <button class = "footerbutton" type = "submit">Subscribe</button>
+            <button class="footerbutton" type = "submit" tabindex="6" accesskey="s">Subscribe</button>
             <hr>
-                <p class > &copy; 2016 Sarah Holden</p> 
-            </div>
+                <p> &copy; 2016 Sarah Holden</p> 
     </footer> 
 
 </body>

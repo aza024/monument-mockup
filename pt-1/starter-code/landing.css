@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Raleway', sans-serif;
     line-height:  1.618;
@@ -9,7 +13,17 @@ p{
 }
 
 /* for navigation */
+a{
+    text-decoration: none;
+}
+#cactus{
+    color: white;
+}
 
+a:visited{
+    color:white;
+    text-decoration:none;
+}
 .nav{
     list-style: none;
     letter-spacing: .25em;
@@ -19,7 +33,7 @@ p{
 .nav li{
     display: inline-block;
     text-transform: uppercase;
-    padding: 0 4%;
+    padding: 0 2em;
 }
 .nav li a{
     text-decoration: none;
@@ -47,20 +61,16 @@ p{
     letter-spacing: 2.4px;
     letter-spacing: .15rem;
     text-align: center;
-    padding-top: 240px;
-    padding-top: 15rem;
-    margin-bottom: 160px;
-    margin-bottom: 10rem;
+    padding-top: 15em;
+    margin-bottom: 15em;
     font-weight: bolder;
 } 
 
 h1{
     letter-spacing: 8px;
     letter-spacing: .5rem;  
-    margin-bottom: none; 
 }
 h2,h3{
-    margin-top: none;
     text-transform:uppercase;
     color:#45545E;
     text-align: center;
@@ -87,14 +97,14 @@ section .aboutmag{
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    padding:5% 5%;
+    padding:3em 3em;
     margin: 5em auto;
     text-align: center;
 } 
 
 section .aboutmag article{
     max-width: 100%;
-    padding: 5% 5%;
+    padding: 2em 2em;
 }
 
 .readmore{
@@ -104,15 +114,22 @@ section .aboutmag article{
     font-weight: bolder;
     letter-spacing: .25em;
 } 
+
+.readmore:hover{
+    background-color: #45545E;
+    color: white;
+    opacity: 0.75;
+    /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; */
+}
 /* photo grid styling */
 
 .picgrid{
-    display: -ms-grid;
+    /* display: -ms-grid; */
     display: grid;
-    -ms-grid-rows: (1fr)[1];
+    /* -ms-grid-rows: (1fr)[1];
         grid-template-rows: repeat(1, 1fr);
     -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); */
     max-width: 100%;
 } 
 
@@ -121,10 +138,45 @@ section .aboutmag article{
     max-width: 90%;
 }
 
-.pic1:{
-    opacity:1;
+.pic1,.pic2,.pic3,.pic4,.pic5,.pic6{
+    opacity: .9;
+    filter:alpha(opacity=90)
+}
+
+.pic1:hover{
+    opacity:0.4;
+    filter:alpha(opacity=40);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
+
+.pic2:hover{
+    opacity:0.4;
+    filter:alpha(opacity=40);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.pic3:hover{
+    opacity:0.4;
+    filter:alpha(opacity=40);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.pic4:hover{
+    opacity:0.4;
+    filter:alpha(opacity=40);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.pic5:hover{
+    opacity:0.4;
+    filter:alpha(opacity=40);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.pic6:hover{
+    opacity:0.4;
+    filter:alpha(opacity=40);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+
+
 .pic1{
     -ms-grid-row-span: 1;
     -ms-grid-row: 1;
@@ -133,10 +185,9 @@ section .aboutmag article{
     -ms-grid-column: 1;
         grid-column: 1 / span 1;
     padding: .5em;
-    padding-bottom:10%;
+    padding-bottom:.5em;
     
 }
-
 
 .pic2{
     -ms-grid-row-span: 1;
@@ -146,7 +197,7 @@ section .aboutmag article{
     -ms-grid-column: 2;
         grid-column: 2 /span 1;
     padding: .5em; 
-    padding-bottom: 10%;
+    padding-bottom: .5em;
 }
 
 .pic3{
@@ -157,7 +208,7 @@ section .aboutmag article{
     -ms-grid-column: 3;
         grid-column: 3 /span 1;
     padding: .5em;
-    padding-bottom: 10%;
+    padding-bottom: .5em;
 }
 
 .pic4{
@@ -167,8 +218,8 @@ section .aboutmag article{
     -ms-grid-column-span: 1;
     -ms-grid-column: 1;
         grid-column: 1 /span 1;
-    padding-top:150%;
-    padding-left:5%
+    padding-top:39em;
+    padding-left:.5em;
 }
 
 .pic5{
@@ -178,8 +229,8 @@ section .aboutmag article{
     -ms-grid-column-span: 1;
     -ms-grid-column: 2;
         grid-column: 2 /span 1;
-    padding-top:113%;
-    padding-left:5%
+    padding-top:29em;
+    padding-left:.5em;
 }
 
 .pic6{
@@ -189,23 +240,22 @@ section .aboutmag article{
     -ms-grid-column-span: 1;
     -ms-grid-column: 3;
         grid-column: 3 /span 1;
-    padding-top:100%;
-    padding-left:5%;
-
+    padding-top: 27em;
+    padding-left:.5em;
 } 
 
 /* form styling */
 form{
-    display: -ms-grid;
+    /* display: -ms-grid; */
     display: grid;
-    -ms-grid-rows: repeat (3, 1fr);
+    /* -ms-grid-rows: repeat (3, 1fr);
         grid-template-rows: repeat (3, 1fr);
     -ms-grid-columns: repeat (3, 1fr);
-        grid-template-columns: repeat (3, 1fr);
+        grid-template-columns: repeat (3, 1fr); */
     max-width: 95%;
-    padding: 1%;
-    margin-left: 2%;
-    margin-bottom: 2%;
+    padding: .75em;
+    margin-left: 1em;
+    margin-bottom: .50em;
 
 }
 
@@ -222,19 +272,19 @@ input{
     width: 96%;
     height: 32px;
     height: 2rem;
-    margin: 1%;
-    padding: 1%;
+    margin: .15em;
+    /* padding: .10em; */
 }
 .message{
     height: 32px;
     height: 2rem;
-    margin-top: 1%;
+    margin-top: .5em;
 }
 
 .submit{
     height: 32px;
     height: 2rem;
-    margin-top: 1%;
+    margin-top: .5em;
 }
 
 .name{
@@ -288,7 +338,7 @@ section .contactform{
 /* footer styling */
 i{
     color:#45545E;
-    margin: 20px;
+    margin: 1em;
 }
 
 hr{
@@ -313,13 +363,10 @@ i:hover{
     color:#45545E;
 }
 
-/* form .footer-form{
-    height: 1em;
-} */
 .footeraddress{
     width: 40%;
     height:10%;
-    padding: 1em;
+    /* padding: 1em; */
     border:none; 
     text-align: center;
 }
@@ -333,7 +380,7 @@ i:hover{
     text-transform: uppercase;
     color:#45545E; 
     opacity: 1; 
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; */
     -webkit-transition: background-color 700ms linear;
     transition: background-color 700ms linear;
     font-weight: bolder;
@@ -343,7 +390,7 @@ i:hover{
     background-color: #45545E;
     color: white;
     opacity: 0.75;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; */
 }
 
 .footername{
@@ -367,63 +414,77 @@ i:hover{
 
     .readmore{
         background-color: transparent;
-        margin-bottom:5%;
+        margin-bottom:.25em;
     }
     .submit{
         background-color: #45545E;
         color: white;
     }
+
+    .pic4{
+        padding-top:21em;
+    }
+    .pic5{
+        padding-top:16em;
+    }
+    .pic6{
+        padding-top:15em;
+    }
 }
+
  /* for phone */
 @media only screen and (max-width: 400px){
-    html{
-        font-size: .75em;
-    }
+        html{
+            font-size: .75em;
+        }
 
-    /* .sticky-nav{
-        max-width:100%;
-    } */
+        .nav{
+            display:none;
+        }
+        .headerimg{
+            z-index: 200;
+            width: 100%;
 
-    .nav{
-        display:none;
-    }
-    .headerimg{
-        z-index: 200;
-        width: 100%;
+        }
+        .contactform{
+            max-width: 100%;
+        }
 
-    }
-    .contactform{
-        max-width: 100%;
-    }
-    /* .name, .email, .subject, .message, .submit{
-        max-width: 98%;
-        } */
-    .footer{
-        position:absolute;
-        max-width: 100%;
-    }
-    .hamburger{
-        display:block;
-        position:absolute;
-        top:10px;
-        left:2px;
-    }
-    #fabars{
-        display:block;
-        position: absolute;
-        color:white;
-        font-size: 1.5rem;
-    }
-    .name, .email, .subject{
-        max-width: 95%;
-        margin:.5%;
-        padding: none;
-    }
-    
-    .message, .submit{
-        max-width: 100;
-    }
-    .navbar{
-        display:none;
-    }
+        .footer{
+            position:absolute;
+            max-width: 100%;
+        }
+        .hamburger{
+            display:block;
+            position:absolute;
+            top:10px;
+            left:2px;
+        }
+        #fabars{
+            display:block;
+            position: absolute;
+            color:white;
+            font-size: 1.5rem;
+        }
+        .name, .email, .subject{
+            max-width: 95%;
+            margin:.25em;
+        }
+        
+        .message, .submit{
+            max-width: 100;
+        }
+        .navbar{
+            display:none;
+        }
+
+        .pic4{
+            padding-top:14em;
+        }
+        .pic5{
+            padding-top:10.5em;
+        }
+        .pic6{
+            padding-top:9.5em;
+        }
     }
