@@ -282,12 +282,6 @@ input{
     margin-top: .5em;
 }
 
-.submit{
-    height: 32px;
-    height: 2rem;
-    margin-top: .5em;
-}
-
 .name{
     -ms-grid-row-span: 1;
     -ms-grid-row: 1;
@@ -330,6 +324,14 @@ input{
     -ms-grid-column-span: 3; 
     -ms-grid-column: 1; 
         grid-column: 1 / span 3;
+        height: 32px;
+    height: 2rem;
+    margin-top: .5em;
+}
+
+.submit:hover{
+    background-color: #45545e;
+    color:white;
 }
 
 section .contactform{
@@ -420,6 +422,10 @@ i:hover{
     .submit{
         background-color: #45545E;
         color: white;
+    }
+    .submit:hover{
+        background-color:white;
+        color: #45545e;
     }
 
     .pic4{
