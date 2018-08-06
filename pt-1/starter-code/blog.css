@@ -158,7 +158,7 @@ i:hover{
     color:#45545E;
 }
 
-.footeremail{
+.email{
     width: 27em;
     padding: 1em;
     border:none;
@@ -168,7 +168,7 @@ i:hover{
 
 }
 
-.footerbutton{
+.button{
     background-color: transparent; 
     border: 2px solid #45545E;
     padding: 1em;
@@ -181,13 +181,12 @@ i:hover{
     font-weight: bolder;
 }
 
-
 .button:hover{
     background-color: #45545E;
     color: white;
     opacity: 0.75;
+    /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; */
 }
-
 .footer-name{
     font-size: .75em;
 }
