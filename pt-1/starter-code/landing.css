@@ -1,3 +1,4 @@
+/*note - browser prefixes are commented out because they caused several errors in linters*/
 html{
     scroll-behavior: smooth;
 }
@@ -273,7 +274,7 @@ input{
     height: 32px;
     height: 2rem;
     margin: .15em;
-    /* padding: .10em; */
+    padding: .10em;
 }
 .message{
     height: 32px;
@@ -366,7 +367,7 @@ i:hover{
 .footeraddress{
     width: 40%;
     height:10%;
-    /* padding: 1em; */
+    padding: 1em;
     border:none; 
     text-align: center;
 }
