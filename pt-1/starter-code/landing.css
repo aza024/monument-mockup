@@ -1,8 +1,8 @@
-body{
+ body{
     font-family: 'Raleway', sans-serif;
     line-height:  1.618;
     text-align: center;
-    margin: 2%;
+    max-width: content;
 }
 p{
     font-family: "Lato", sans-serif;
@@ -11,21 +11,17 @@ p{
 /* for navigation */
 
 .nav{
-    width:100%; 
-    padding: 0;
     list-style: none;
     letter-spacing: .25em;
     background-color:white;
+    max-width: 96%;
 }
 .nav li{
     display: inline-block;
-    justify-content: space-between; 
     text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
+    padding: 0 4%;
 }
 .nav li a{
-    padding: 15px 70px;
-    margin: 5px;
     text-decoration: none;
     font-weight: bold;
     color:#7C98A9;
@@ -35,12 +31,17 @@ p{
     color:#45545E;
 }
 
+.hamburger{
+    display:none;
+}
+
 /* header */
- section  .headerimg{
+.headerimg{
     background: url(images/home_header_bg.jpg);
     background-size: cover;
     background-position: center;
     height: 50vh;
+    max-width: 100%;
     color: white;
     text-transform: uppercase;
     letter-spacing: .15rem;
@@ -63,7 +64,6 @@ h2,h3{
 
 /* articles */
 
-
 .archivearticles{
     display: flex; 
     justify-content: space-between;
@@ -76,17 +76,15 @@ h2,h3{
 
 section .aboutmag{
     background-color: #D0F2F6;
-    /* position: relative; */
     height: max-content;
-    padding:1% 3%;
-    margin: 5em 0;
+    padding:5% 5%;
+    margin: 5em auto;
     text-align: center;
-}
-
+} 
 
 section .aboutmag article{
     max-width: 100%;
-    padding-left: 6.5em;
+    padding: 5% 5%;
 }
 
 .readmore{
@@ -95,20 +93,15 @@ section .aboutmag article{
     border: 1px solid #45545E;
     font-weight: bolder;
     letter-spacing: .25em;
-}
+} 
 /* photo grid styling */
 
 .picgrid{
     display: grid;
     grid-template-rows: repeat(1, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    /* width:100% !important; */
-    /* height: auto !important; */
     max-width: 100%;
-    /* line-height:0;
-    column-count:5;
-    column-gap:10px; */
-}
+} 
 
 
 .pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .articleimg1, .articleimg2, .articleimg3{
@@ -168,11 +161,9 @@ section .aboutmag article{
 .pic6{
     grid-row: 1 / span 1;
     grid-column: 3 /span 1;
-    /* width: 50vh;
-    height:50.9vh; */
     padding-top:100%;
     padding-left:5%;
-    /* max-width: 100%; */
+
 } 
 
 /* form styling */
@@ -180,13 +171,11 @@ form{
     display: grid;
     grid-template-rows: repeat (3, 1fr);
     grid-template-columns: repeat (3, 1fr);
-    max-width: 100%;
-    padding: 2%;
-    margin: 2%;
-    /* height: 20vh;
-    width: 20vh; */
-    /* padding-left: 15em; */
-    /* position: relative; */
+    max-width: 95%;
+    /* padding: 2%; */
+    margin-left: 2%;
+    margin-bottom: 2%;
+
 }
 
 input{ 
@@ -200,15 +189,16 @@ input{
 
 .name, .email, .subject{
     height: 2rem;
-    max-width: 100%;
+    margin: 1%;
 }
 .message{
     height: 2rem;
+    margin-top: 1%;
 }
 
 .submit{
     height: 2rem;
-    max-width: 100%;
+    margin-top: 1%;
 }
 
 .name{
@@ -253,14 +243,7 @@ hr{
 
 footer{
     background:#D4F2F5;
-    /* text-align: center; */
-    /* padding: 1.5em 1em;
-    margin: 1em; */
-    /* position: absolute; */
     max-width: 100%;
-    /* bottom: 0; 
-    left: 0; */
-
 }
 
 .social-media i{
@@ -274,12 +257,12 @@ i:hover{
     color:#45545E;
 }
 
-form .footer-form{
+/* form .footer-form{
     height: 1em;
-}
+} */
 .footeraddress{
-    width: 32em;
-    height:2em;
+    width: 40%;
+    height:10%;
     padding: 1em;
     border:none; 
     text-align: center;
@@ -289,8 +272,8 @@ form .footer-form{
     background-color: transparent; 
     border: 2px solid #45545E;
     padding: 1em;
-    margin-left: 10px;
-    width: 150px;
+    margin-left: 1em;
+    width: 24%;
     text-transform: uppercase;
     color:#45545E; 
     opacity: 1;
@@ -304,24 +287,59 @@ form .footer-form{
     opacity: 0.75;
 }
 
-.footer-name{
-    font-size: .75em;
+.footername{
+    font-size: 10%;
 }
 
 /* for tablet */
-@media only screen and (max-width: 768px){
+@media screen and (max-width:768px){
+    main{
+        display: inline-block;
+        max-width: 95%;
+    }
+
+    .archivearticles{
+        display: flex; 
+        flex-flow: column;
+    }
+
+    .readmore{
+        background-color: transparent;
+        margin-bottom:5%;
+    }
+    .submit{
+        background-color: #45545E;
+        color: white;
+    }
+}
+ /* for phone */
+@media only screen and (max-width: 600px){
     .headerimg{
-        width:100%;
+        margin:none;
+        z-index:200;
     }
-
-    .nav li{
-        width: 100%
+    .contactform{
+        max-width: 100%;
     }
-}
-
-/* for phone */
-@media only screen and (max-width: 768px){
-    .pic4, .pic5, .pic6{
-
+    /* .name, .email, .subject, .message, .submit{
+        max-width: 98%;
+        } */
+    .footer{
+        position:sticky;
     }
-}
+    .hamburger{
+        display:block;
+        position:absolute;
+        top:10px;
+        left:2px;
+    }
+    #fabars{
+        display:block;
+        position: relative;
+        color:white;
+        z-index:100;
+    }
+    .navbar{
+        display:none;
+    }
+    }
