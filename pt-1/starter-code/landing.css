@@ -1,4 +1,4 @@
- body{
+body{
     font-family: 'Raleway', sans-serif;
     line-height:  1.618;
     text-align: center;
@@ -44,14 +44,18 @@ p{
     max-width: 100%;
     color: white;
     text-transform: uppercase;
+    letter-spacing: 2.4px;
     letter-spacing: .15rem;
     text-align: center;
+    padding-top: 240px;
     padding-top: 15rem;
+    margin-bottom: 160px;
     margin-bottom: 10rem;
     font-weight: bolder;
 } 
 
 h1{
+    letter-spacing: 8px;
     letter-spacing: .5rem;  
     margin-bottom: none; 
 }
@@ -65,8 +69,12 @@ h2,h3{
 /* articles */
 
 .archivearticles{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    justify-content: space-between;
+    -webkit-box-pack: justify; 
+        -ms-flex-pack: justify; 
+            justify-content: space-between;
     font-family: "Lato", sans-serif;
 }
 
@@ -76,6 +84,8 @@ h2,h3{
 
 section .aboutmag{
     background-color: #D0F2F6;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     padding:5% 5%;
     margin: 5em auto;
@@ -97,9 +107,12 @@ section .aboutmag article{
 /* photo grid styling */
 
 .picgrid{
+    display: -ms-grid;
     display: grid;
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[1];
+        grid-template-rows: repeat(1, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     max-width: 100%;
 } 
 
@@ -107,60 +120,75 @@ section .aboutmag article{
 .pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .articleimg1, .articleimg2, .articleimg3{
     max-width: 90%;
 }
+
+.pic1:{
+    opacity:1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
 .pic1{
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 1;
-    /* width: 50vh;
-    height: 65vh; */
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 1;
+        grid-row: 1 / span 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-column: 1;
+        grid-column: 1 / span 1;
     padding: .5em;
     padding-bottom:10%;
-    /* max-width: 100%; */
+    
 }
 
 
 .pic2{
-    grid-row: 1 / span 1;
-    grid-column: 2 /span 1;
-    /* width: 50vh;
-    height:55vh; */
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 1;
+        grid-row: 1 / span 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-column: 2;
+        grid-column: 2 /span 1;
     padding: .5em; 
     padding-bottom: 10%;
-    /* max-width: 100%; */
 }
 
 .pic3{
-    grid-row: 1 / span 1;
-    grid-column: 3 /span 1;
-    /* width: 50vh;
-    height:50vh; */
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 1;
+        grid-row: 1 / span 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-column: 3;
+        grid-column: 3 /span 1;
     padding: .5em;
     padding-bottom: 10%;
-    /* max-width: 100%; */
 }
 
 .pic4{
-    grid-row: 1 / span 1;
-    grid-column: 1 /span 1;
-    /* width: 50vh;
-    height:45.9vh; */
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 1;
+        grid-row: 1 / span 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-column: 1;
+        grid-column: 1 /span 1;
     padding-top:150%;
     padding-left:5%
-    /* max-width: 100%; */
 }
 
 .pic5{
-    grid-row: 1 / span 1;
-    grid-column: 2 /span 1;
-    /* width: 50vh;
-    height:60.9vh; */
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 1;
+        grid-row: 1 / span 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-column: 2;
+        grid-column: 2 /span 1;
     padding-top:113%;
     padding-left:5%
-    /* max-width: 100%; */
 }
 
 .pic6{
-    grid-row: 1 / span 1;
-    grid-column: 3 /span 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 1;
+        grid-row: 1 / span 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-column: 3;
+        grid-column: 3 /span 1;
     padding-top:100%;
     padding-left:5%;
 
@@ -168,11 +196,14 @@ section .aboutmag article{
 
 /* form styling */
 form{
+    display: -ms-grid;
     display: grid;
-    grid-template-rows: repeat (3, 1fr);
-    grid-template-columns: repeat (3, 1fr);
+    -ms-grid-rows: repeat (3, 1fr);
+        grid-template-rows: repeat (3, 1fr);
+    -ms-grid-columns: repeat (3, 1fr);
+        grid-template-columns: repeat (3, 1fr);
     max-width: 95%;
-    /* padding: 2%; */
+    padding: 1%;
     margin-left: 2%;
     margin-bottom: 2%;
 
@@ -188,41 +219,66 @@ input{
 }
 
 .name, .email, .subject{
+    width: 96%;
+    height: 32px;
     height: 2rem;
     margin: 1%;
+    padding: 1%;
 }
 .message{
+    height: 32px;
     height: 2rem;
     margin-top: 1%;
 }
 
 .submit{
+    height: 32px;
     height: 2rem;
     margin-top: 1%;
 }
 
 .name{
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 1;
+        grid-row: 1 / span 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-column: 1;
+        grid-column: 1 / span 1;
 }
 .formemail{
-    grid-row: 1/ span 1; 
-    grid-column: 2 / span 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 1;
+        grid-row: 1/ span 1; 
+    -ms-grid-column-span: 1; 
+    -ms-grid-column: 2; 
+        grid-column: 2 / span 1;
 }
 
 .subject{
-    grid-row: 1 / span 1;
-    grid-column: 3 / span 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 1;
+        grid-row: 1 / span 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-column: 3;
+        grid-column: 3 / span 1;
 }
 
 .message{
-    grid-row: 2 / span 1;
-    grid-column: 1 / span 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 2;
+        grid-row: 2 / span 1;
+    -ms-grid-column-span: 3;
+    -ms-grid-column: 1;
+        grid-column: 1 / span 3;
 }
 
 .submit{
-    grid-row: 3 / span 1; 
-    grid-column: 1 / span 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 3;
+        grid-row: 3 / span 1; 
+    -ms-grid-column-span: 3; 
+    -ms-grid-column: 1; 
+        grid-column: 1 / span 3;
 }
 
 section .contactform{
@@ -276,7 +332,9 @@ i:hover{
     width: 24%;
     text-transform: uppercase;
     color:#45545E; 
-    opacity: 1;
+    opacity: 1; 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transition: background-color 700ms linear;
     transition: background-color 700ms linear;
     font-weight: bolder;
 }
@@ -285,6 +343,7 @@ i:hover{
     background-color: #45545E;
     color: white;
     opacity: 0.75;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
 }
 
 .footername{
@@ -299,8 +358,11 @@ i:hover{
     }
 
     .archivearticles{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex; 
-        flex-flow: column;
+        -ms-flex-flow: column; 
+            flex-flow: column;
     }
 
     .readmore{
@@ -313,10 +375,22 @@ i:hover{
     }
 }
  /* for phone */
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 400px){
+    html{
+        font-size: .75em;
+    }
+
+    /* .sticky-nav{
+        max-width:100%;
+    } */
+
+    .nav{
+        display:none;
+    }
     .headerimg{
-        margin:none;
-        z-index:200;
+        z-index: 200;
+        width: 100%;
+
     }
     .contactform{
         max-width: 100%;
@@ -325,7 +399,8 @@ i:hover{
         max-width: 98%;
         } */
     .footer{
-        position:sticky;
+        position:absolute;
+        max-width: 100%;
     }
     .hamburger{
         display:block;
@@ -335,9 +410,18 @@ i:hover{
     }
     #fabars{
         display:block;
-        position: relative;
+        position: absolute;
         color:white;
-        z-index:100;
+        font-size: 1.5rem;
+    }
+    .name, .email, .subject{
+        max-width: 95%;
+        margin:.5%;
+        padding: none;
+    }
+    
+    .message, .submit{
+        max-width: 100;
     }
     .navbar{
         display:none;
